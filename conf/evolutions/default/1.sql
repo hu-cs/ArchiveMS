@@ -9,7 +9,7 @@ create table category_storage (
 ;
 
 create table Records (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   category                  varchar(255),
   name                      varchar(255),
   tag                       varchar(255),
@@ -28,30 +28,18 @@ create table UserStorage (
   constraint pk_UserStorage primary key (username))
 ;
 
-create sequence category_storage_seq;
-
-create sequence Records_seq;
-
-create sequence UserStorage_seq;
-
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists category_storage;
+drop table category_storage;
 
-drop table if exists Records;
+drop table Records;
 
-drop table if exists UserStorage;
+drop table UserStorage;
 
-SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists category_storage_seq;
-
-drop sequence if exists Records_seq;
-
-drop sequence if exists UserStorage_seq;
+SET FOREIGN_KEY_CHECKS=1;
 
