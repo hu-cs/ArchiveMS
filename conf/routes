@@ -1,0 +1,55 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+
+GET     /login                              controllers.KeyChecker.login()
+POST    /login                              controllers.KeyChecker.authenticate()
+GET     /logout                             controllers.KeyChecker.logout()
+
+
+
+GET     /                           controllers.Application.index()
+GET		/archive					controllers.Application.renderArchivePage()
+POST	/archive/uploaded			controllers.Archiver.archive()
+GET		/category					controllers.Application.renderCategoryPage()
+POST	/category/add				controllers.CategoryCreator.addCategory()
+POST	/category/remove			controllers.CategoryRemover.removeCategory()
+GET		/record						controllers.Application.renderRecordPage()
+POST	/search_record				controllers.RecordFinder.findRecord()
+GET		/search_result/:submitType				controllers.PageMaker.makePage(submitType: String)
+POST	/update/:id						controllers.RecordSelector.selectRecord(id: Integer)
+GET		/update/:id						controllers.Application.renderUpdatePage(id: Integer)
+POST	/recordUpdated				controllers.RecordUpdater.updateRecord()
+
+#User Management
+
+GET		/user/add					controllers.Application.renderAddUserPage()
+POST	/user/created				controllers.UserCreator.createUser()
+GET		/user/remove				controllers.Application.renderRemoveUserPage()
+POST	/user/removed/:username		controllers.UserRemover.removeUser(username: String)
+
+
+#Search
+
+GET		/search						controllers.Application.renderSearchPage()
+GET		/search/download/:path		controllers.MediaDownloader.downloadMedia(path :String)
+GET		/search/preview/:path		controllers.RecordPlayer.playRecord(path: String)
+
+
+#Backup
+GET		/backup						controllers.Application.renderBackupPage()
+POST	/backup/done				controllers.BackupStarter.startBackup()
+
+
+#Report
+GET		/report						controllers.Application.renderReportPage()
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+

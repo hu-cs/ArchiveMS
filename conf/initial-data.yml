@@ -1,0 +1,12 @@
+
+# Users
+
+users:
+
+    - !!models.UserStorage
+        username:      admin
+        password:   admin
+        job:       admin
+        
+    
+    
