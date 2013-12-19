@@ -1482,7 +1482,7 @@ Fig10: User management-delete <br>
 
 
 ## Extracting Responsibility, Association, and Attributes:
-  <table width="796" height="94" border="0" align="center">
+  <table width="796" border="0" align="center">
 
 <tr>
     <td>UC-1 Authentication </td>
