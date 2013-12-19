@@ -438,7 +438,7 @@ Fig10: User management-delete <br>
 <img src="Img/usecase diagrams/user management.jpg" width="910" height="310"><br>
 
 ## Detailed Use-Cases:
-<table width="796" height="94" border="0" align="center">
+<table width="796" border="0" align="center">
 
   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left">
