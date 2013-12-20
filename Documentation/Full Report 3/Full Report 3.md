@@ -1488,7 +1488,7 @@ Fig10: User management-delete <br>
     <td>UC-1 Authentication </td>
   </tr>
   <tr>
-    <td><table border="1" cellspacing="0" cellpadding="0" align="left">
+    <td><table border="1" align="left">
       <tr>
         <td width="623" colspan="3" valign="top"><p align="center">UC-1</p></td>
       </tr>
